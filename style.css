@@ -25,4 +25,20 @@
     border-radius: 5px;
 
     display:inline-grid;
+
+    margin-right:300px;
+    margin-top:175px;
+}
+
+.color {
+
+    background-color: blue ;
+    border: 1px solid black;
+}
+
+.square {
+
+    background-color: white;
+
+    border: 1px solid black;
 }

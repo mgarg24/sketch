@@ -9,7 +9,7 @@ let btn = document.querySelector(".reset");
 for(i=0;i<256;i++){
 
     const div = document.createElement("div");
-    div.setAttribute('style', "background:white; border: 1px solid black;");
+    div.classList.add("square");
     grid.appendChild(div);
 }
 
@@ -28,7 +28,8 @@ input.addEventListener("keypress", function(event) {
             for(i=0;i<box;i++){
 
                 const div = document.createElement("div");
-                div.setAttribute('style', "background:white; border: 1px solid black;");
+                /*div.setAttribute('style', "background:white; border: 1px solid black;");*/
+                div.classList.add("square");
                 grid.appendChild(div);
             }
         }
@@ -46,7 +47,7 @@ btn.addEventListener("click", () => {
     for(i=0;i<256;i++){
 
         const div = document.createElement("div");
-        div.setAttribute('style', "background:white; border: 1px solid black;");
+        div.classList.add("square");
         grid.appendChild(div);
     }
     grid.style.gridTemplateColumns = "repeat(16, 1fr)";
@@ -54,4 +55,11 @@ btn.addEventListener("click", () => {
 
 });
 
+
+const square = document.querySelector(".square");
+
+grid.addEventListener('mouseover', function(event) {
+
+    event.target.classList.replace("square", "color");
+});
 
